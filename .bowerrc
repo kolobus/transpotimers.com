@@ -1,0 +1,8 @@
+{
+  "directory": "js/",
+  "registry": {
+    "search": [
+      "https://bower.herokuapp.com"
+    ]
+  }
+}
