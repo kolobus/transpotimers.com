@@ -17,6 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "lightbox2": "lightbox#^2.9.0"
+    "lightbox2": "lightbox#^2.9.0",
+    "bootstrap-sass": "^3.3.7"
   }
 }

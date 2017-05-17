@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        {% include meta.html %}
+        <title>{{ page.title }} - {{ site.title }}</title>
+        <link href="css/transpotimers.css?v=1" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dorsa|Over+the+Rainbow|Open+Sans">
+    </head>
+    <body>
+
+        <div class="tpHeader">
+            <div class="container">
+                <div class="row">
+                <div class="col-xs-12 col-md-6 tpLogo">
+                    <h2>
+                        <div class="visible-xs">
+                            <img src="images/tagline.png" width="99" height="100" alt="Transpotimers">
+                        </div>
+                        THE TRANSPOTIMERS
+                    </h2>
+                    <h3>
+                        <span>POWERED BY WIRELESSCOIN</span>
+                    </h3>
+                </div>
+                <div class="hidden-xs hidden-sm col-md-6">
+                    <div class="tpTagLine">
+                        <div>
+                            time travel in our<br>
+                            lifetime
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li{% if page.permalink == '/index.html' %} class="active"{% endif %}><a href="/index.html">Welcome</a></li>
+                        <li{% if page.permalink == '/main.html' %} class="active"{% endif %}><a href="/main.html">Book</a></li>
+                        <li{% if page.permalink == '/about-us.html' %} class="active"{% endif %}><a href="/about-us.html">Tickets</a></li>
+                        <li{% if page.permalink == '/services.html' %} class="active"{% endif %}><a href="/services.html">Songs</a></li>
+                        <li{% if page.permalink == '/memes.html' %} class="active"{% endif %}><a href="/memes.html">Memes</a></li>
+                        <li{% if page.permalink == '/get-in-touch.html' %} class="active"{% endif %}><a href="/get-in-touch.html">Get in touch!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+
+          <div class="jumbotron tpContent">
+            {{ content }}
+          </div>
+
+        </div>
+
+        <script src="js/jquery/dist/jquery.min.js"></script>
+        <script src="js/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="js/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+
+    </body>
+</html>

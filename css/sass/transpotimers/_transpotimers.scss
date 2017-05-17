@@ -1,0 +1,154 @@
+$tpheader-height: 120px;
+
+@-moz-keyframes spin {
+    0% {
+        @include rotate(0deg);
+    }
+    100% {
+        @include rotate(359deg);
+    }
+}
+@-webkit-keyframes spin {
+    0% {
+        @include rotate(0deg);
+    }
+    100% {
+        @include rotate(359deg);
+    }
+}
+@-o-keyframes spin {
+    0% {
+        @include rotate(0deg);
+    }
+    100% {
+        @include rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        @include rotate(0deg);
+    }
+    100% {
+        @include rotate(359deg);
+    }
+}
+
+body {
+    background-image: url(../images/body.jpg);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.tpHeader {
+    background: #004766;
+    height: $tpheader-height;
+}
+
+    .tpLogo {
+        white-space: nowrap;
+        overflow: hidden;
+
+        img {
+            margin: 10px 0;
+        }
+        img:hover,
+        img:active {
+            @include animation(spin 3s infinite linear);
+        }
+
+        h2 {
+            margin: 12px 0 0;
+            color: #ff0;
+            font-family: Dorsa, sans-serif;
+            font-size: 500%;
+            line-height: 100%;
+            letter-spacing: .09em;
+        }
+
+        h3 {
+            margin: -3px 0 0;
+            font-size: 150%;
+            font-family: 'Open Sans', sans-serif;
+
+            span {
+                color: #004766;
+                background: rgba(140, 165, 131, .8);
+                padding: 0 5px;
+                text-shadow: none;
+                letter-spacing: .05em;
+            }
+        }
+    }
+
+    .tpTagLine {
+        background: url(../images/tagline.png) right center no-repeat;
+        height: $tpheader-height;
+
+        div {
+            background: rgba(0, 0, 0, .2);
+            color: #93AC22;
+            padding: 8px 20px 8px 0;
+            width: 260px;
+            position: relative;
+            top: 20px;
+            margin: 0 120px 0 auto;
+            font-size: 200%;
+            line-height: 122%;
+            text-align: right;
+            font-family: 'Over The Rainbow', sans-serif;
+        }
+    }
+
+.container .tpContent {
+    border-radius: 0;
+    border: 0;
+    margin: 25px 0 100px;
+    background: rgba(0,0,0,.7);
+
+    h2 {
+        border-bottom: #ff0 1px solid;
+        color: #fff;
+        padding: 0 0 10px;
+        margin: 30px 0 20px;
+    }
+
+    ol,
+    ul {
+        font-size: 21px;
+    }
+
+    img,
+    iframe {
+        max-width: 100%;
+    }
+}
+
+    a[data-lightbox="transpotimers"] {
+        $lightbox-height: 150px;
+
+        height: $lightbox-height;
+        width: $lightbox-height;
+        line-height: $lightbox-height;
+        margin: 5px;
+        display: inline-block;
+        overflow: hidden;
+        background: rgba(255, 255, 255, .1);
+
+        img {
+            width: $lightbox-height;
+        }
+    }
+
+@media (max-width: $screen-xs) {
+
+    .tpHeader {
+        height: $tpheader-height * 2;
+    }
+
+        .tpLogo {
+            h2,
+            h3 {
+                text-align: center;
+            }
+        }
+
+}
